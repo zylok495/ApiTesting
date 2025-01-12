@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import static constants.Constants.BASE_URL;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class BookingService {
 
@@ -20,8 +21,26 @@ public class BookingService {
                 .when()
                 .post(BASE_URL + "/auth")
                 .then()
+                .log()
+                .all()
                 .contentType(ContentType.JSON)
-                .extract().response();
+                .extract()
+                .response();
+    }
+
+    public Response getBooking() {
+        LOGGER.info("Get Booking");
+
+        return  given()
+                .headers("Content-Type", "application/json")
+                .when()
+                .get(BASE_URL + "/booking")
+                .then()
+                .log()
+                .all()
+                .contentType(ContentType.JSON)
+                .extract()
+                .response();
     }
 
 
