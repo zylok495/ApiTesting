@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Test Suite">
-    <test name="Search Test">
+    <test name="Booking Service Tests">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
         <classes>
             <class name="org.testing.BookingService.PostAuthTests"/>
             <class name="org.testing.BookingService.GetBookingTests"/>
