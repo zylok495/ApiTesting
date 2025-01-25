@@ -6,9 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import testing.services.BookingService;
 
-import static constants.Constants.TOKEN_GENERATION_FAILED;
 import static org.apache.http.HttpStatus.SC_OK;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PostAuthTests extends BookingService {
 

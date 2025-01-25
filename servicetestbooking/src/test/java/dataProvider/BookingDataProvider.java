@@ -2,23 +2,20 @@ package dataProvider;
 
 import org.testng.annotations.DataProvider;
 
-import java.util.ArrayList;
-import java.util.Map;
-
 public class BookingDataProvider {
 
-    @DataProvider (name = "valid-credentials")
+    @DataProvider(name = "valid-credentials")
     public Object[][] validCredentialsDataProvider() {
-        return new Object[][] {{"{\"username\" : \"admin\",\"password\" : \"password123\"}"}};
+        return new Object[][]{{"{\"username\" : \"admin\",\"password\" : \"password123\"}"}};
     }
 
-    @DataProvider (name = "invalid-username")
+    @DataProvider(name = "invalid-username")
     public Object[][] invalidUsernameDataProvider() {
-        return new Object[][] {{"{\"username\" : \"bad\",\"password\" : \"password123\"}"}};
+        return new Object[][]{{"{\"username\" : \"bad\",\"password\" : \"password123\"}"}};
     }
 
     @DataProvider(name = "queryParamsForGetBooking")
     public Object[][] queryParamsForGetBookingDataProvider() {
-        return new Object[][] {{"firstname", "sally"}};
+        return new Object[][]{{"firstname", "sally"}};
     }
 }
