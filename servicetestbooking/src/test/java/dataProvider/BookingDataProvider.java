@@ -14,8 +14,18 @@ public class BookingDataProvider {
         return new Object[][]{{"{\"username\" : \"bad\",\"password\" : \"password123\"}"}};
     }
 
-    @DataProvider(name = "queryParamsForGetBooking")
-    public Object[][] queryParamsForGetBookingDataProvider() {
+    @DataProvider(name = "firstnameQueryParams")
+    public Object[][] firstnameQueryParamsForGetBookingDataProvider() {
         return new Object[][]{{"firstname", "sally"}};
+    }
+
+    @DataProvider(name = "lastnameQueryParams")
+    public Object[][] lastnameQueryParamsForGetBookingDataProvider() {
+        return new Object[][] {{"lastname", "brown"}};
+    }
+
+    @DataProvider(name = "firstnameAndLastnameQueryParams")
+    public Object[][] firstnameAndLastnameQueryParamsForGetBookingDaraProvider() {
+        return new Object[][] {{"firstname", "sally", "lastname", "brown"}};
     }
 }

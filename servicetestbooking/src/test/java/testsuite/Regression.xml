@@ -4,6 +4,7 @@
         <groups>
             <run>
                 <include name="Regression"/>
+                <exclude name="Quarantine"/>
             </run>
         </groups>
         <classes>
