@@ -7,6 +7,7 @@
             </run>
         </groups>
         <classes>
+            <class name="hook.BookingHook"/>
             <class name="org.testing.BookingService.PostAuthTests"/>
             <class name="org.testing.BookingService.GetBookingTests"/>
         </classes>

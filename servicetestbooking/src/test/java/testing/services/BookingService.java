@@ -1,8 +1,11 @@
 package testing.services;
 
+import groovy.util.logging.Slf4j;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import java.util.Map;
 
@@ -11,7 +14,7 @@ import static io.restassured.RestAssured.given;
 
 public class BookingService {
 
-    public static final Logger LOGGER = Logger.getLogger(BookingService.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(Slf4j.class);
 
     public Response postAuthToken(String userParams) {
         LOGGER.info("Post Auth Token");
